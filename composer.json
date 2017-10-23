@@ -1,8 +1,7 @@
 {
-    "name": "phpoffice/phpexcel",
-    "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
-    "keywords": ["PHP","Excel","OpenXML","xlsx","xls","spreadsheet"],
-    "homepage": "http://phpexcel.codeplex.com",
+    "name": "formstack/phpexcel",
+    "description": "Formstack Fork of PHPOffice/PHPExcel",
+    "homepage": "https://github.com/formstack/PHPExcel",
     "type": "library",
     "license": "LGPL",
     "authors": [
@@ -22,7 +21,7 @@
         }
     ],
     "require": {
-        "php": ">=5.2.0",
+        "php": ">=5.6.0",
         "ext-xml": "*",
         "ext-xmlwriter": "*"
     },
@@ -34,5 +33,6 @@
         "psr-0": {
             "PHPExcel": "Classes/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
