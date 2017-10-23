@@ -2400,10 +2400,14 @@ class PHPExcel_Calculation_Financial
             if (!is_numeric($values[$i])) {
                 return PHPExcel_Calculation_Functions::VALUE();
             }
-            $xnpv += $values[$i] / pow(
-                    1 + $rate,
-                    PHPExcel_Calculation_DateTime::DATEDIF($dates[0], $dates[$i], 'd') / 365
-                );
+
+            $dateDiff = PHPExcel_Calculation_DateTime::DATEDIF($dates[0], $dates[$i], 'd');
+
+            if (!is_numeric($dateDiff)) {
+                $dateDiff = 0;
+            }
+
+            $xnpv += $values[$i] / pow(1 + $rate, $dateDiff / 365);
         }
 
         return (is_finite($xnpv)) ? $xnpv : PHPExcel_Calculation_Functions::VALUE();
