@@ -96,6 +96,7 @@ class PHPExcel_Calculation {
 	private static $_instance;
 
 
+    private $delta;
 	/**
 	 * Instance of the workbook this Calculation Engine is using
 	 *
@@ -164,6 +165,7 @@ class PHPExcel_Calculation {
 	 *
 	 */
 	private $debugLog;
+    private $_debugLog;
 
 	/**
 	 * Flag to determine how formula errors should be handled
